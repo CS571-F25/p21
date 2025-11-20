@@ -20,7 +20,7 @@ export default function NavigationBar() {
       }}
     >
       {/* Left side — App Name */}
-      <span style={{ fontSize: "32px", color: "#ff5722" }}>LUNCHBOX</span>
+      <span style={{ fontSize: "32px", color: "#ff5722" }}>LUNCHHHHHHHHHHH</span>
 
       {/* Right side — ABOUT button (PUT IT HERE) */}
       <span>
