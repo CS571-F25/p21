@@ -31,7 +31,7 @@ export default function Login() {
       if (isSignup) {
         const { error } = await signUp(email, password, name, username.trim());
         if (error) throw error;
-        setSuccess("Account created! Please check your email to verify your account.");
+        setSuccess("Account created!");
         setUsername("");
         setName("");
         setEmail("");
