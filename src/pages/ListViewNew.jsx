@@ -145,8 +145,6 @@ export default function ListView() {
             tags: [],
             image: imageUrl || null,
             image_alt: imageAltText || null,
-            website: null,
-            maps_link: null,
             list_id: listId,
             created_by: user.id
         });
@@ -254,9 +252,7 @@ export default function ListView() {
             rating: editFormData.rating ? parseFloat(editFormData.rating) : null,
             tags: [],
             image: imageUrl || null,
-            image_alt: imageAltText || null,
-            website: null,
-            maps_link: null
+            image_alt: imageAltText || null
         });
 
         if (error) {
@@ -296,8 +292,8 @@ export default function ListView() {
         const matchesSearch = !normalizedSearch
             ? true
             : (restaurant.name?.toLowerCase().includes(normalizedSearch)) ||
-              (restaurant.description?.toLowerCase().includes(normalizedSearch)) ||
-              (restaurant.tags || []).some((tag) => tag.toLowerCase().includes(normalizedSearch));
+            (restaurant.description?.toLowerCase().includes(normalizedSearch)) ||
+            (restaurant.tags || []).some((tag) => tag.toLowerCase().includes(normalizedSearch));
         const meetsRating = minRating === "any" ? true : (restaurant.rating || 0) >= Number(minRating);
         return matchesTag && matchesSearch && meetsRating;
     });
