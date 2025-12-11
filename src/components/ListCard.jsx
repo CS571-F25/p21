@@ -33,7 +33,7 @@ export default function ListCard({ title, creator, restaurantCount, onClick }) {
           style={{
             fontSize: "0.875rem",
             backgroundColor: "#E34234",
-            color: "white"
+            color: "black"
           }}
         >
           {restaurantCount} {restaurantCount === 1 ? 'restaurant' : 'restaurants'}
